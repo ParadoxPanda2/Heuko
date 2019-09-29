@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Spookhy Development">
+    <meta name="description" content="Heuko | A chatting program">   
+    <meta name="keywords" content="聊天室,Node.js,websocket">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heuko</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <h1>Heuko</h1>
+            <span id="status"></span>
+        </div>
+        <div id="historyMsg"></div>
+        <div class="controls">
+            <div class="items">
+                <input id="colorStyle" type="color" placeholder="#000" title="font color"/>
+                <input id="emoji" type="button" value="emoji" title="emoji"/>
+                <label for="sendImage" class="imageLable">
+                    <input type="button" value="image"/>
+                    <input id="sendImage" type="file" value="image"/>
+                </label>
+                <input id="clearBtn" type="button" value="clear" title="clear screen"/>
+            </div>
+            <textarea id="messageInput" placeholder="Say something here, then press SEND..."></textarea>
+            <input id="sendBtn" type="button" value="SEND">
+            <div id="emojiWrapper"></div>
+        </div>
+    </div>
+    <div id="loginWrapper">
+        <p id="info">Connecting to the Heuko severs, please wait...</p>
+        <div id="nickWrapper">
+            <input type="text" placeholder="Username" id="nicknameInput"/>
+            <input type="button" value="OK" id="loginBtn"/>
+        </div>
+    </div>
+    <footer>
+        <small>Spookhy Development | spookhydev.moderator@gmail.com</small>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/go_chatting.js"></script>
+</body>
+</html>
